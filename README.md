@@ -5,9 +5,21 @@
 
 Ce tutoriel vous guide pour installer proprement **Metasploitable2** sur un serveur OpenMediaVault (OMV) avec Docker, démarrer et arrêter le conteneur, et trouver son adresse IP. 
 
-Conçu pour un environnement NAS comme OMV, ce guide intègre des solutions pour maintenir le conteneur en exécution. Les étapes sont détaillées pour être suivies facilement, avec des commandes précises et des explications.
+Conçu pour un environnement NAS comme OMV, ce guide intègre des solutions pour maintenir le conteneur en exécution. Les étapes sont détaillées pour être suivies facilement, avec des commandes précises et des explications.<br>
 
----
+---<br>
+
+## Racourcis <br>
+Les raccourcis expriment de l'aide après installation!!! : <br><br>
+
+Utilisateur : msfadmin Mot de passe : msfadmin Avoir l"ip : docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' metasploitable2
+
+docker run -d --name metasploitable2 -p 10021:21 -p 10022:22 -p 10080:80 -p 10443:443 -p 10023:23 -p 10445:445 -p 13306:3306 -p 15900:5900 tleemcjr/metasploitable2 /bin/bash -c "service ssh start; service apache2 start; tail -f /dev/null"
+
+Testez les services : Depuis votre machine Kali Linux, testez les ports mappés : FTP : ftp <adresse_IP_hôte> 10021 SSH : ssh -p 10022 msfadmin@<adresse_IP_hôte> HTTP : Ouvrez un navigateur ou utilisez curl http://<adresse_IP_hôte>:10080 Ca fonctionne ici! ssh -p 10022 -o HostKeyAlgorithms=ssh-rsa -o KexAlgorithms=diffie-hellman-group1-sha1 msfadmin@192.168.1.69
+
+## FIN des Racourcis <br><br>
+
 
 ## <span style="color: blue">Introduction</span>
 
