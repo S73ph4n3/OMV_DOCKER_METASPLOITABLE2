@@ -27,7 +27,7 @@ ssh -p 10022 -o HostKeyAlgorithms=ssh-rsa -o KexAlgorithms=diffie-hellman-group1
 
 ## FIN des Racourcis <br>
 
-## <span style="color: blue">Introduction</span>
+# <span style="color: blue">Introduction</span>
 
 Metasploitable2 est une machine virtuelle intentionnellement vulnérable utilisée pour les tests de pénétration. <br>
 
@@ -67,7 +67,7 @@ Par défaut, Docker utilise le système de fichiers racine, ce qui peut être li
 Créez un dossier partagé dans OMV (par exemple, /srv/dev-disk-by-label/data/docker) via Stockage > Systèmes de fichiers.<br>
 Allez dans OMV-Extras > Docker > Paramètres, et définissez ce chemin comme emplacement pour les données Docker.<bt>
 Appliquez les modifications.<br>
-<span style="color: red">Étape 2 : Installation Propre de Metasploitable2</span>
+<span style="color: #0000FF">Étape 2 : Installation Propre de Metasploitable2</span>
 ### 2.1 Supprimer toute trace précédente
 Si vous avez déjà un conteneur Metasploitable2, supprimez-le pour repartir de zéro :<br>
 bash<br>
