@@ -9,11 +9,11 @@ Conçu pour un environnement NAS comme OMV, ce guide intègre des solutions pour
 
 ## Raccourcis <br>
 Les raccourcis expriment de l'aide après installation! : <br><br>
-<span style="color: red;"
+
 Utilisateur ROOT : <br>
 User : msfadmin <br>
-Mot de passe : msfadmin </span>
-<br><br><br>
+Mot de passe : msfadmin<br>
+<br><br>
 
 Avoir l"ip :<br>
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' metasploitable2<br>
