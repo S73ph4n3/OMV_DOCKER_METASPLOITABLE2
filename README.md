@@ -7,14 +7,13 @@ Ce tutoriel vous guide pour installer proprement **Metasploitable2** sur un serv
 
 Conçu pour un environnement NAS comme OMV, ce guide intègre des solutions pour maintenir le conteneur en exécution. Les étapes sont détaillées pour être suivies facilement, avec des commandes précises et des explications.<br>
 
----<br>
-
 ## Raccourcis <br>
 Les raccourcis expriment de l'aide après installation! : <br><br>
-
+<span style="color: red;"
 Utilisateur ROOT : <br>
 User : msfadmin <br>
-Mot de passe : msfadmin <br><br><br>
+Mot de passe : msfadmin </span>
+<br><br><br>
 
 Avoir l"ip :<br>
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' metasploitable2<br>
@@ -35,7 +34,6 @@ Metasploitable2 est une machine virtuelle intentionnellement vulnérable utilis�
 
 Ce tutoriel suppose que vous avez un serveur OMV fonctionnel et que vous accédez à son interface via SSH. Nous allons installer Docker, configurer Metasploitable2 pour qu’il reste actif, et expliquer comment le gérer.<br>
 
-########<br>
 
 ## <span style="color: purple">Étape 1 : Préparation et Installation de Docker sur OpenMediaVault</span>
 
