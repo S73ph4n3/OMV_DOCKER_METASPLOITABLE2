@@ -49,9 +49,9 @@ Pour commencer, activez SSH sur votre serveur OMV :
 
 Ensuite, installez OMV-Extras pour ajouter des fonctionnalités comme Docker :
 
-- Connectez-vous au serveur via SSH avec :
-  ```bash
-  ssh root@<adresse_IP_du_serveur>
+- Connectez-vous au serveur via SSH avec :<br>
+  bash<br>
+  'ssh root@<adresse_IP_du_serveur'<br>
   (Remplacez <adresse_IP_du_serveur> par l’IP réelle de votre serveur OMV.)
 ## Installez OMV-Extras avec cette commande :
 bash
