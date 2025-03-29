@@ -7,15 +7,15 @@ Ce tutoriel vous guide pour installer proprement **Metasploitable2** sur un serv
 
 Conçu pour un environnement NAS comme OMV, ce guide intègre des solutions pour maintenir le conteneur en exécution. Les étapes sont détaillées pour être suivies facilement, avec des commandes précises et des explications.<br>
 
-## Raccourcis <br>
-Les raccourcis expriment de l'aide après installation! : <br><br>
+## Racourcis aprés installations <br>
+Les raccourcis expriment de l'aide après installation. : <br>
 
 Utilisateur ROOT : <br>
 User : msfadmin <br>
 Mot de passe : msfadmin<br>
-<br><br>
+<br>
 
-Avoir l"ip :<br>
+Avoir l'ip du contener :<br>
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' metasploitable2<br>
 
 Maper les prots : ( Vous pouvez maper plus de ports que l'exemple ci-dessous! ) <br>
@@ -25,8 +25,7 @@ Testez les services : Depuis votre machine Kali Linux, testez les ports mappés 
 Ca fonctionne ici! <br>
 ssh -p 10022 -o HostKeyAlgorithms=ssh-rsa -o KexAlgorithms=diffie-hellman-group1-sha1 msfadmin@[TON-IP_LOCAL]
 
-## FIN des Racourcis <br><br>
-##########
+## FIN des Racourcis <br>
 
 ## <span style="color: blue">Introduction</span>
 
