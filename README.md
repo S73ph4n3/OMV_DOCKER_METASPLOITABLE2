@@ -9,7 +9,7 @@ Conçu pour un environnement NAS comme OMV, ce guide intègre des solutions pour
 
 ---<br>
 
-## Racourcis <br>
+## Raccourcis <br>
 Les raccourcis expriment de l'aide après installation!!! : <br><br>
 
 Utilisateur : msfadmin Mot de passe : msfadmin Avoir l"ip : docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' metasploitable2
