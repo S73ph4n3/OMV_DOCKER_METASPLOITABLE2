@@ -18,7 +18,7 @@ Mot de passe : msfadmin<br>
 Avoir l'ip du contener :<br>
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' metasploitable2<br>
 
-Maper les prots : ( Vous pouvez maper plus de ports! ) <br>
+Maper les ports : (Vous pouvez maper plus de ports.) <br>
 docker run -d --name metasploitable2 -p 10021:21 -p 10022:22 -p 10080:80 -p 10443:443 -p 10023:23 -p 10445:445 -p 13306:3306 -p 15900:5900 tleemcjr/metasploitable2 /bin/bash -c "service ssh start; service apache2 start; tail -f /dev/null"
 
 Testez les services : Depuis votre machine Kali Linux, testez les ports mappés : FTP : ftp <adresse_IP_hôte> 10021 SSH : ssh -p 10022 msfadmin@<adresse_IP_hôte> HTTP : Ouvrez un navigateur ou utilisez curl http://<adresse_IP_hôte>:10080 <br>
